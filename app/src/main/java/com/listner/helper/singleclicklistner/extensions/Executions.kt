@@ -8,7 +8,7 @@ import com.listner.helper.singleclicklistner.extensions.Helper.lastClickTime
 const val TAG = "click_listener_called"
 
 object Executions {
-    fun View.setOnOneClickListener(debounceTime: Long = 1000L/*600L*/, action: () -> Unit) {
+    fun View.setOnOneClickListener(debounceTime: Long = 600L, action: () -> Unit) {
         this.setOnClickListener(object : View.OnClickListener {
 
             override fun onClick(v: View) {

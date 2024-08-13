@@ -31,12 +31,12 @@ class MainActivity : AppCompatActivity() {
             liveCount.observe(this@MainActivity) {
                 tvCount.text = it.toString()
             }
-            btnAdd.setOnOneClickListener /*Next click will valid after 1000 milliseconds*/{
+            btnAdd.setOnOneClickListener(1000L) /**Next click will valid after 1000 milliseconds*/{
                 val count = liveCount.value ?: 0
                 liveCount.postValue(count + 1)
             }
 
-            btnMinus.setOnOneClickListener /*Next click will valid after 1000 milliseconds*/{
+            btnMinus.setOnOneClickListener(3000L) /**Next click will valid after 3000 milliseconds*/{
                 val count = liveCount.value ?: 0
                 if (count > 0)
                     liveCount.postValue(count - 1)
